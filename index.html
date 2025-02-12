@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <meta property="og:title" content="Wedding Invitation">
+    <meta property="og:description" content="Allen & Dinda's Wedding Invitation">
+    <meta property="og:image" content="cover2.jpeg"> <!-- Specify the URL of your preview image -->
+    <meta property="og:image:width" content="50"> <!-- Width of the image in pixels -->
+    <meta property="og:image:height" content="50"> <!-- Height of the image in pixels -->
+    <link rel="icon" href="logo2.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+      <!-- Loading Animation -->
+    <div id="loadingContainer" class="loading-container">
+        <div id="lottieAnimation"></div>
+    </div>
+
+    <div id="invitationCover" class="invitation-cover">
+        <div class="cover-content">
+            <img src="weddify_logo.png" alt="nikah fix" class="slide-down nikahfix_logo">
+            <p class="pop-up invited">You are invited</p>
+            <img src="bold_user.png" alt="user" class="user_face pop-up">
+            <p class="guest pop-up"><span id="guestName"></span></p>
+            <button id="openButton" class="slide-up">Open Invitation</button>
+        </div>
+    </div>
+
+    <div id="invitationContent" class="invitation-content">
+        <nav>
+            <ul>
+                <li><a href="#section1"><i class="fas fa-home"></i><span>Home</span></a></li>
+                <li><a href="#section4"><i class="fas fa-user"></i><span>Profile</span></a></li>
+                <li><a href="#section5"><i class="fas fa-calendar"></i><span>Calendar</span></a></li>
+                <li><a href="#section7"><i class="fas fa-envelope"></i><span>Messages</span></a></li>
+                <li><a href="#love-story-section"><i class="fas fa-heart"></i><span>Love Story</span></a></li>
+            </ul>
+        </nav>        
+
+        <div class="section fade-in" id="section1">
+            <p class="section1-date">15•05•2025</p>
+            <img src="album1.jpeg" alt="foto_album" class="album1" id="albumImage">
+            <div class="title">
+                <div class="title-content">
+                    <h1>The Wedding of</h1>
+                    <p class="couple">Allen & Dinda</p>
+                </div>
+                <div>
+                    <i id="addGoogleCalendar" class="fas fa-plus-circle"></i>
+                </div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div id="countdown" class="slide-left">
+                <div class="countdown1">
+                    <div class="unit">
+                        <span class="number" id="seconds"></span>
+                    </div>
+                    <span>.</span>
+                    <div class="unit">
+                        <span class="number" id="minutes"></span>
+                    </div>
+                </div>
+                <div class="countdown1">
+                    <div class="unit">
+                        <span class="number" id="hours"></span>
+                    </div>
+                    <span>.</span>
+                    <div class="unit">
+                        <span class="number" id="days"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="audio-controls">
+                <i id="shuffleButton" class="fas fa-random"></i>
+                <i id="previousButton" class="fas fa-backward"></i>
+                <i id="playPauseButton" class="fas fa-circle-play play-btn"></i>
+                <i id="nextButton" class="fas fa-forward"></i>
+                <i id="spotifyButton" class="fab fa-spotify"></i>
+            </div>   
+            
+            <!-- Modal -->
+            <div id="imageModal" class="modal">
+                <div class="modal-content">
+                    <span class="close-spotify">&times;</span>
+                    <img id="modalImage" src="spotify.jpeg" alt="spotify-code">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section" id="section2">  
+            <div class="section2-content">
+                <div class="video-section">
+                    <video id="invitationVideo" class="video" muted playsinline>
+                    <source src="videoplayback.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="section2-p">
+                    <p class="section2-couple slide-left">Allen & Dinda</p>
+                    <p class="pengantar slide-left">Ya Allah, dengan segala kesucian hati, kami bersujud memohon Ridho-Mu, untuk menuju Sunnah Rasul-Mu, membentuk keluarga sakinah, mawaddah, warohmah.</p>
+                    <p class="terjemah slide-left">"Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir." <span class="nama-surah">(Q.S Ar-Rum: 21)</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section4">
+            <div class="profile-container">
+                <div class="profile">
+                    <img src="husband.jpeg" alt="Husband Profile" class="fade-in">
+                    <div class="profile-info">
+                        <div class="name-follow">
+                            <h3 class="fade-in">Yusril Ramadhani Mardjun</h3>
+                            <a href="https://www.instagram.com/" target="_blank" class="fade-in follow">Ikuti</a>
+                        </div>
+                        <p class="fade-in">Putra pertama dari Bapak Yunus Indratno Mardjun & Ibu Ekawati</p>
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="wife.jpeg" alt="Wife Profile" class="fade-in">
+                    <div class="profile-info">
+                        <div class="name-follow">
+                            <h3 class="fade-in">Ledinda Ayu Putri Pandini, S. I. Kom</h3>
+                            <a href="https://www.instagram.com/" target="_blank" class="fade-in follow">Ikuti</a>
+                        </div>
+                        <p class="fade-in">Putri Pertama Bapak Murdin, S. Sos & Ibu Nurlaily Karyani (Almh)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section5">
+            <div class="wedding-detail">
+
+                <div class="event fade-slide">
+                    <div class="event-1">
+                        <img src="akad.jpeg" alt="Akad" class="event-image">
+                        <div class="event-2">
+                            <div class="event-3">
+                                <p class="event-type">Akad Nikah</p>
+                                <div class="event-4">
+                                    <p class="event-time">Sabtu, 11 Januari 2025, Pukul 08:30 WITA</p>
+                                    <a href="https://maps.app.goo.gl/ZR9Zk59UF1GMHGgn9" target="_blank" class="location-button">Buka Map</a>
+                                </div>
+                            </div>
+                            <p class="location">Bertempat di <span class="place">Gedung BPSDMD NTB (Ex Bkd)</span> Jl Pemuda No 59 Dasan Agung, Kec. Selaparang Kota Mataram</p>
+                        </div>
+                    </div>
+                </div>  
+
+                <div class="event fade-slide">
+                    <div class="event-1">
+                        <img src="resepsi.jpeg" alt="Akad" class="event-image">
+                        <div class="event-2">
+                            <div class="event-3">
+                                <p class="event-type">Resepsi</p>
+                                <div class="event-4">
+                                    <p class="event-time">Sabtu, 11 Januari 2025, Pukul 08:30 WITA</p>
+                                    <a href="https://maps.app.goo.gl/ZR9Zk59UF1GMHGgn9" target="_blank" class="location-button">Buka Map</a>
+                                </div>
+                            </div>
+                            <p class="location">Bertempat di <span class="place">Gedung BPSDMD NTB (Ex Bkd)</span> Jl Pemuda No 59 Dasan Agung, Kec. Selaparang Kota Mataram</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section" id="section6">
+            <div class="gallery-container">
+                <h2 class="gallery-title fade-slide">Photo Gallery</h2>
+                <div class="gallery fade-slide">
+                    <img src="gallery1.jpeg" alt="Gallery Photo 1" class="fade-slide">
+                    <img src="gallery2.jpeg" alt="Gallery Photo 2" class="fade-slide">
+                    <img src="gallery3.jpeg" alt="Gallery Photo 3" class="fade-slide">
+                    <img src="gallery6.jpeg" alt="Gallery Photo 4" class="fade-slide">
+                    <img src="gallery5.jpeg" alt="Gallery Photo 5" class="fade-slide">
+                    <img src="gallery4.jpeg" alt="Gallery Photo 6" class="fade-slide">
+                    <img src="gallery7.jpeg" alt="Gallery Photo 7" class="fade-slide">
+                    <img src="share.jpeg" alt="Gallery Photo 8" class="fade-slide">
+                    <img src="gallery8.jpeg" alt="Gallery Photo 9" class="fade-slide">
+                    <img src="gallery9.jpeg" alt="Gallery Photo 10" class="fade-slide">
+                    <img src="gallery10.jpeg" alt="Gallery Photo 11" class="fade-slide">
+                    <img src="section1.jpeg" alt="Gallery Photo 12" class="fade-slide">
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Fullscreen -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+
+        
+            <div class="section" id="section7">
+                <h2 class="fade-slide">Your Message</h2>
+                <form id="messageForm" action="https://gugun-retno.glitch.me/messages" method="POST" class="fade-slide">
+                    <input type="text" id="formGuestName" name="name" placeholder="Your Name" required>
+                    <textarea id="guestMessage" name="message" rows="4" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send</button>
+                </form>
+                <div id="messageList" class="fade-slide">
+                </div>
+            </div>
+
+
+        <!-- <div class="section" id="section8">
+            <div class="gift-details">
+                    <h2 class="fade-slide">Gift</h2>
+                    <p class="fade-slide">Jika ingin memberikan hadiah pernikahan, Anda dapat melakukannya melalui nomor rekening berikut:</p>
+                <div class="bank-container">
+                    <div class="bank-item">
+                        <img src="BSI.png" alt="Logo Bank" class="bank-logo1 fade-slide">
+                        <p class="bank-number fade-slide">8588250510</p>
+                        <button id="copyButton" class="copyButton fade-slide"><i class="fas fa-copy"></i></button>
+                    </div>
+                    <div class="bank-item">
+                        <img src="BRI.png" alt="Logo Bank" class="bank-logo2 fade-slide">
+                        <p class="bank-number fade-slide">473601059788535</p>
+                        <button id="copyButton" class="copyButton fade-slide"><i class="fas fa-copy"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="thank-you">
+            <img src="weddify_logo.png" alt="nikahfix" class="nikahfix-thanks slide-down">
+            <p class="fade-slide">Merupakan suatu kehormatan & kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i hadir untuk memberikan doa restu kepada putra-putri kami.</p>
+            <p class="fade-slide">Kami yang Berbahagia</p>
+            <h2 class="fade-slide couple-name">Allen & Dinda</h2>
+        </div>
+        
+        <!-- Footer -->
+        <footer>
+            <div class="footer-container">
+                <div class="logo fade-slide">
+                    <img src="nc logo.png" alt="Logo" />
+                </div>
+                <div class="social-media-ncp fade-slide">
+                    <a href="https://www.facebook.com/profile.php?id=61560664461271&mibextid=LQQJ4d" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/nicwaproject?igsh=enk4YWxoa24zNzY5&utm_source=qr" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/+6285974176110" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://nicwaproject.github.io/NicwaProject-Store/" target="_blank" class="social-icon"><i class="fas fa-globe"></i></a>
+                </div>
+            </div>
+        </footer>
+</div>
+
+<audio id="backgroundMusic" src="Waking Up Together With You.mp3"></audio>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

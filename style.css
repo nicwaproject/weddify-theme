@@ -1,0 +1,1104 @@
+
+:root {
+    --primary-color: #1DB954;
+    --background-color: #292929;
+    --text-color: #8C8C8C;
+    --alto: #DCDCDC;
+    --primari-font: "Nunito", serif;
+}
+
+body {
+    font-family: var(--primari-font);
+    font-weight: 300;
+    font-style: normal;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* ........................COVER.................. */
+.loading-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+#lottieAnimation {
+    width: 150px;
+}
+
+.invitation-cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    background-color: black;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    overflow-y: hidden;
+}
+
+.cover-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;  
+    padding: 20px;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    line-height: 0.8;
+    color: white;
+    font-family: var(--primari-font);
+    font-weight: 300;
+    font-style: normal;
+}
+
+.invitation-content {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+}
+
+.nikahfix_logo {
+    width: 210px;
+    padding: 20px 0; 
+}
+
+.user_face {
+    width: 90px;
+}
+
+.invited {
+    font-size: 1.5em;
+}
+.guest {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+#openButton {
+    width: 250px;
+    margin-top: 5px;
+    padding: 10px 15px;
+    font-size: 13px;
+    color: black;
+    background-color: var(--primary-color);
+    border: solid 1px gray;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--primari-font);
+    font-style: normal;
+    font-weight: 1000;
+    font-optical-sizing: auto;
+}
+
+#openButton:hover {
+    background-color: var(--background-gray);
+    color: var(--primary-color);
+}
+
+/* NAVIGASI */
+nav {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 450px;
+    background-color: black;
+    z-index: 999;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 2px;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    text-align: center;
+}
+
+nav ul li a {
+    font-family: var(--primari-font);
+    color: grey;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 6px;
+    padding: 5px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: white; /* Warna teks saat hover */
+}
+
+nav ul li a span {
+    font-size: 10px; /* Atur ukuran teks */
+}
+
+
+/* ................................SECTION........................ */
+.section {
+    font-family: "Old Standard TT", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    overflow-x: hidden;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+/* .......SECTION 1........... */
+
+#section1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: auto;
+    font-family: var(--primari-font);
+    font-weight: 300;
+    font-style: normal;
+    text-align: left;
+    transition: background 0.5s ease-in-out;
+}
+
+#albumImage {
+    transition: opacity 0.5s ease-in-out;
+}
+
+#albumImage.fade {
+    opacity: 0;
+}
+
+.section1-date {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+#section1 h1 { 
+    font-size: 1.8em;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.couple {
+    color: #d9d9d9;
+    margin: 0;
+    padding: 0;
+}
+
+.album1 {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    left: 50%; /* Letakkan elemen di tengah horizontal */
+    transform: translateX(-50%);
+}
+
+.title {
+    width: 100%;
+    margin: 50px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+}
+
+.title i {
+    position: relative;
+    right: 0;
+    font-size: 24px; /* Sesuaikan ukuran ikon */
+    color: white; /* Warna ikon (opsional) */
+    cursor: pointer;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 4px; /* Ketebalan garis */
+    background-color: var(--alto); /* Warna latar */
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px 0 5px 0; /* Jarak antara garis dengan elemen lainnya */
+}
+
+.progress-bar {
+    width: 0%; /* Dimulai dari 0% */
+    height: 100%;
+    background-color: grey; /* Warna hijau (ubah sesuai tema Anda) */
+    transition: width 0.1s linear; /* Animasi smooth */
+}
+
+/* countdown */
+#countdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 12px;
+    border-radius: 10px;
+    gap: 8px;
+    margin: 0;
+}
+
+.countdown1{
+    display: flex;
+}
+
+.countdown1 span {
+    color: white;
+}
+
+.unit {
+    display: flex;
+    text-align: center;
+    margin: 0;
+}
+
+.unit span {
+    padding: 1px;
+}
+
+.number {
+    font-weight: bold;
+    color: white; /* Number color */
+}
+
+.label {
+    color: white; /* Label color */
+}
+
+/* .....................AUDIO CONTROL.................... */
+.audio-controls {
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.audio-controls i {
+    color: white;
+    cursor: pointer;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+#playPauseButton {
+    font-size: 50px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ..........SECTION 2......... */
+#section2 {
+    background-color: black; /* Change background color if needed */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    flex-direction: column;
+    color:white;
+    position: relative; /* Add relative positioning to section */
+    overflow: hidden;
+    font-family: var(--primari-font);
+    font-weight: 300;
+    font-style: normal;
+    height: auto;
+}
+
+.section2-content {
+    border-radius: 10px;
+}
+
+.section2-p {
+    background-color: #292929;
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.section2-couple {
+    font-size: 1.5em;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.content3-section2 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    margin: 0;
+}
+
+.video-quality {
+    width: 22px;
+}
+
+.match {
+    color: green;
+}
+
+.su {
+    background-color: #d9d9d9;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+
+.pengantar {
+    font-size: 12px;
+    text-align: justify;
+    color: var(--text-color);
+}
+
+.terjemah {
+    color: var(--text-color);
+    font-size: 12px;
+    text-align: justify;
+}
+
+.nama-surah {
+    color: white;
+}
+
+/* VIDEO */
+.video-section {
+    position: relative;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .video {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .video-controls {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  #videoButton {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    padding: 10px 10px;
+    font-size: 10px;
+    background-color: var(--background-gray);
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #videoButton:hover {
+    background-color: var(--background-gray);
+    color: var(--primary-color);
+}
+
+/* .............section 4 profile........... */
+#section4 {
+    padding: 20px;
+    background-color:black;
+    color: white;
+    text-align: left;
+    font-family: var(--primari-font);
+    font-weight: 300;
+    font-style: normal;
+}
+
+#section4 h1 {
+    font-size: 24px;
+}
+
+.profile-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.profile-info {
+    background-color: var(--background-color);
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-sizing: border-box;
+}
+
+.name-follow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-info h3 {
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.follow {
+    color: white;
+    font-family: var(--primari-font);
+    font-size: 12px;
+    text-decoration: none;
+    font-weight: 500;
+    border: 1px solid var(--text-color);
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.profile-info p {
+    font-size: 12px;
+    color: var(--text-color);
+    margin: 5px 0;
+}
+
+/* .............SECTION 5 WEDDING DETAIL............. */
+#section5 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+    background-color: black;
+    color:white;
+    position: relative;
+    overflow-y: hidden;
+    font-family: var(--primari-font);
+    font-weight: 300;
+    font-style: normal;
+}
+
+.wedding-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.event {
+    display: flex;
+    align-items: f;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    min-width: 300px;
+    margin: 10px 0; 
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    margin: 0;
+}
+
+.event-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.event-2 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.event-type {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+}
+
+.event-time {
+    font-size: 12px;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.event-3 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.event-4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.location {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+.place {
+    color: white;
+    font-weight: 500;
+}
+
+.location-button {
+    color: white;;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--text-color);
+    padding: 5px 10px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* .........SECTION 6 GALLERY............ */
+
+#section6 {
+    text-align: left;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+.gallery-container {
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 15px;
+}
+#section6 h2 {
+    font-family: var(--primari-font);
+    font-size: 20px;
+}
+
+/* Gallery styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Ubah menjadi 4 kolom */
+    gap: 10px; /* Jarak antar gambar */
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* .............SECTION 7 MESSAGE........ */
+
+/* General section styling */
+#section7 {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+}
+
+#section7 h2 {
+    color: white;
+    font-family: var(--primari-font);
+    margin: 20px;
+    font-size: 20px;
+}
+
+
+/* Form styling */
+#messageForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#messageForm input,
+#messageForm textarea {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 350px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: var(--background-gray);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#messageForm button {
+    font-family: var(--primari-font);
+    font-weight: 900;
+    font-style: normal;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-size: 12px;
+    background-color:var(--primary-color);
+    color: black;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Message list styling */
+#messageList {
+    margin-top: 20px;
+    max-height: 400px; /* Atur tinggi maksimal, misalnya 200px */
+    overflow-y: auto; /* Tambahkan scroll vertikal */
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.message {
+    color: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    font-family: var(--primari-font);
+}
+
+.message .message-content {
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text-color);
+}
+
+.message .message-author {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.message .message-body {
+    margin-top: 10px;
+}
+
+
+/* CSS untuk mengganti font placeholder */
+#formGuestName::placeholder,
+#guestMessage::placeholder {
+    font-family: var(--primari-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px; /* Ganti dengan ukuran font yang diinginkan */
+    color: #b8b8b8; /* Ganti dengan warna yang diinginkan */
+}
+/* CSS untuk mengganti font input */
+#formGuestName,
+#guestMessage {
+    font-family: var(--primari-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 12px; /* Ganti dengan ukuran font yang diinginkan */
+    color: #333; /* Ganti dengan warna yang diinginkan */
+}
+
+
+/* ...........SECTION 8............. */
+#section8 {
+    background-color: black;
+    text-align: left;
+    color: white; /* Text color */
+    height: auto; /* Set height to 100% of viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 50px;
+    padding: 20px;
+    overflow-y: hidden;
+}
+
+.bank-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.gift-details {
+    font-family: var(--primari-font);
+    font-weight: 400;
+    font-style: normal;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.gift-details p {
+    margin: 10px 0;
+    font-family: var(--primari-font);
+}
+
+.bank-item {
+    display: flex;
+    align-items: center;
+    background-color: var(--background-gray);
+    border-radius: 20px;
+    padding: 10px;
+    gap: 15px;
+    font-family: var(--primari-font);
+    color: gray;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+}
+
+.bank-logo1 {
+    width: 100px;
+    height: auto;
+}
+
+.bank-logo2 {
+    width: 60px;
+    height: auto;
+}
+
+button {
+    padding: 4px 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--background-gray);
+    color: var(--primary-color);
+}
+
+/* THANK-YOU SECTION */
+.thank-you {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 100vh;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: 50px 20px;
+    line-height: 1;
+}
+
+.nikahfix-thanks {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.thank-you h2 {
+    font-family: var(--primari-font);
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    color: white;
+}
+
+.thank-you p {
+    font-family: var(--primari-font);
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+    color: gray;
+}
+
+/* Footer */
+footer {
+    background-color: var(--background-gray);
+    padding-bottom: 50px;
+    padding-top: 15px;
+}
+  
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+  
+.logo img {
+    height: 30px;
+}
+  
+.social-media-ncp {
+    display: flex;
+}
+  
+.social-icon {
+    color: black; /* Warna ikon */
+    font-size: 20px; /* Ukuran ikon */
+    margin-left: 15px; /* Jarak antar ikon */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+/* ...............  ANIMATION............... */
+.fade-in {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+}
+
+.fade-slide {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.fade-slide.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide Down */
+.slide-down {
+    opacity: 0;
+    transform: translateY(-30px); /* Mulai dari atas */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.slide-down.visible {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi awal */
+}
+
+/* Slide Up */
+.slide-up {
+    opacity: 0;
+    transform: translateY(30px); /* Mulai dari bawah */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.slide-up.visible {
+    opacity: 1;
+    transform: translateY(0); /* Kembali ke posisi awal */
+}
+
+/* Pop Up */
+.pop-up {
+    opacity: 0;
+    transform: scale(0.8); /* Mulai lebih kecil */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.pop-up.visible {
+    opacity: 1;
+    transform: scale(1); /* Kembali ke ukuran normal */
+}
+
+/* Slide Left */
+.slide-left {
+    opacity: 0;
+    transform: translateX(-30px); /* Mulai dari kiri */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.slide-left.visible {
+    opacity: 1;
+    transform: translateX(0); /* Kembali ke posisi awal */
+}
+
+/* Slide Right */
+.slide-right {
+    opacity: 0;
+    transform: translateX(30px); /* Mulai dari kanan */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.slide-right.visible {
+    opacity: 1;
+    transform: translateX(0); /* Kembali ke posisi awal */
+}
+
+/* SEPERATOR  */
+
+.separator {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+}
+
+.separator::before, 
+.separator::after {
+    content: '';
+    height: 1px; /* Membuat garis horizontal */
+    flex-grow: 1;
+    width: 100px;
+    background-color: black;
+}
+
+/* ..............Style for the modal............. */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 700px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content, #caption {  
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.close-spotify {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+  
+#modalImage {
+   width: 100%;
+   max-width: 400px;
+   height: auto;
+}
+
+
+/* ......................MEDIA QUERY..................... */
+@media (max-width: 600px) {
+    /* ...........COVER.................*/
+    .invitation-cover {
+        overflow-y: hidden;
+    }
+
+    .thank-you {
+        padding: 10px 20px;
+        line-height: 1;
+    }
+
+    /* SECTION 9 */
+    #section9 {
+        background-image: url('background.jpeg');
+    }
+}
