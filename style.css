@@ -640,7 +640,7 @@ nav ul li a span {
 .gallery {
     display: flex;
     gap: 16px; /* Gap between images */
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     overflow-x: scroll;
     padding: 16px;
     scroll-behavior: smooth;
