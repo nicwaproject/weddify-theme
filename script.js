@@ -247,6 +247,33 @@ observer1.observe(video);
     const intervalId = setInterval(calculateCountdown, 1000);
     calculateCountdown();    
 
+//gallery swipe
+// Select elements
+const gallery = document.querySelector('.gallery');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+// Scroll to the left
+prevBtn.addEventListener('click', () => {
+    gallery.scrollBy({ left: -gallery.clientWidth * 0.75, behavior: 'smooth' });
+});
+
+// Scroll to the right
+nextBtn.addEventListener('click', () => {
+    gallery.scrollBy({ left: gallery.clientWidth * 0.75, behavior: 'smooth' });
+});
+
+//gesture for mobile
+let startX;
+gallery.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+gallery.addEventListener('touchmove', (e) => {
+    const deltaX = startX - e.touches[0].clientX;
+    gallery.scrollBy({ left: deltaX, behavior: 'smooth' });
+});
+
 // Function to copy account details
 function copyAccountDetails(event) {
     const button = event.target; // Get the clicked button
