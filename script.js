@@ -270,7 +270,7 @@ gallery.addEventListener('touchstart', (e) => {
 });
 
 gallery.addEventListener('touchmove', (e) => {
-    const deltaX = startX - e.touches[0].clientX;
+    const deltaX = (startX - e.touches[0].clientX) * 2;
     gallery.scrollBy({ left: deltaX, behavior: 'smooth' });
 });
 
