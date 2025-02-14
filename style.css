@@ -713,6 +713,14 @@ nav ul li a span {
         opacity: 1;
     }
 }
+
+/* Sembunyikan tombol prev dan next di perangkat mobile */
+@media (max-width: 768px) {
+    .nav-btn {
+        display: none; /* Sembunyikan tombol */
+    }
+}
+
 /* .............SECTION 7 MESSAGE........ */
 
 /* General section styling */
