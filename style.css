@@ -13,6 +13,7 @@ body {
     font-style: normal;
     margin: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -509,6 +510,23 @@ nav ul li a span {
     margin: 5px 0;
 }
 
+.buttom-decoration {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.decoration-inside {
+    color: var(--text-color);
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+
+.play-decoration {
+    font-size: 24px;
+}
+
 /* .............SECTION 5 WEDDING DETAIL............. */
 #section5 {
     display: flex;
@@ -623,11 +641,6 @@ nav ul li a span {
     color: white;
 }
 
-#section6 h2 {
-    font-family: var(--primari-font);
-    font-size: 20px;
-}
-
 /* Style gallery container */
 .gallery-container {
     overflow: hidden;
@@ -640,19 +653,21 @@ nav ul li a span {
 .gallery {
     display: flex;
     gap: 16px; /* Gap between images */
-    scroll-snap-type: x proximity;
+    scroll-snap-type: x mandatory;
     overflow-x: scroll;
-    padding: 16px;
+    padding: 16px 0;
     scroll-behavior: smooth;
 }
 
 .gallery img {
-    flex: 0 0 75%; /* Set width to 75% of container */
-    max-width: 75%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 16px;
+    flex: 0 0 auto; /* Menghindari gambar stretch */
+    width: 130px; /* Sesuaikan dengan kebutuhan */
+    height: 130px; /* Pastikan tinggi sama dengan lebar */
+    aspect-ratio: 1 / 1; /* Menjaga gambar tetap persegi */
+    object-fit: cover; /* Memastikan gambar terpotong sesuai kotak */
+    border-radius: 6px; /* Opsional, jika ingin sudut melengkung */
     scroll-snap-align: center;
+    transition: transform 0.3s ease;
 }
 
 /* Hide scrollbar */
@@ -667,7 +682,7 @@ nav ul li a span {
 /* Style for navigation buttons */
 .nav-btn {
     position: absolute;
-    top: 50%; /* Posisi vertikal di tengah */
+    top: 65%; /* Posisi vertikal di tengah */
     transform: translateY(-50%); /* Menyesuaikan agar tombol sejajar di tengah */
     background-color: rgba(0, 0, 0, 0.5); /* Tombol transparan */
     color: #fff; /* Warna teks */
@@ -680,6 +695,7 @@ nav ul li a span {
     align-items: center;
     cursor: pointer;
     z-index: 10; /* Pastikan tombol berada di atas gambar */
+    transition: background-color 0.3s ease;
 }
 
 /* Left button (prev) */
@@ -708,13 +724,6 @@ nav ul li a span {
     }
 }
 
-/* Sembunyikan tombol prev dan next di perangkat mobile */
-@media (max-width: 768px) {
-    .nav-btn {
-        display: none; /* Sembunyikan tombol */
-    }
-}
-
 /* .............SECTION 7 MESSAGE........ */
 
 /* General section styling */
@@ -729,16 +738,22 @@ nav ul li a span {
 #section7 h2 {
     color: white;
     font-family: var(--primari-font);
-    margin: 20px;
+    margin: 20px 0;
     font-size: 20px;
+}
+
+.message-container {
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 10px;
 }
 
 
 /* Form styling */
 #messageForm {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 5px;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -747,12 +762,18 @@ nav ul li a span {
 #messageForm textarea {
     box-sizing: border-box;
     width: 100%;
+    height: 35px;
     max-width: 350px;
     margin: 10px 0;
-    padding: 10px;
+    padding: 10px 20px;
     background-color: var(--background-gray);
-    border-radius: 5px;
+    border-radius: 30px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#messageForm input:focus,
+#messageForm textarea:focus {
+    color: white;
 }
 
 #messageForm button {
@@ -760,16 +781,24 @@ nav ul li a span {
     font-weight: 900;
     font-style: normal;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    font-size: 12px;
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
     color: black;
     border: none;
-    border-radius: 20px;
+    border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 100%;
-    max-width: 350px;
+    width: 45px;  /* Pastikan width dan height sama */
+    height: 40px; /* Sesuaikan dengan width untuk membuat lingkaran */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Pastikan padding tidak mengganggu perataan */
 }
+
+#messageForm button i {
+    font-size: 14px; /* Sesuaikan ukuran ikon */
+}
+
 
 /* Message list styling */
 #messageList {
@@ -790,6 +819,7 @@ nav ul li a span {
     width: 100%;
     box-sizing: border-box;
     font-family: var(--primari-font);
+    border-bottom: 1px solid var(--text-color);
 }
 
 .message .message-content {
@@ -809,7 +839,6 @@ nav ul li a span {
 .message .message-body {
     margin-top: 10px;
 }
-
 
 /* CSS untuk mengganti font placeholder */
 #formGuestName::placeholder,
@@ -1074,6 +1103,7 @@ footer {
 }
 
 /* ..............Style for the modal............. */
+/* ..............Style for the modal............. */
 .modal {
     display: none;
     position: fixed;
@@ -1082,19 +1112,20 @@ footer {
     left: 0;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: auto;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.9);
 }
 
 .modal-content {
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    max-width: 700px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
 }
 
 #caption {
@@ -1120,13 +1151,12 @@ footer {
 
 .close {
     position: absolute;
-    top: 15px;
+    top: 50px;
     right: 35px;
     color: #f1f1f1;
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
-    cursor: pointer;
 }
 
 .close:hover,
@@ -1136,23 +1166,31 @@ footer {
     cursor: pointer;
 }
 
-.close-spotify {
+.prev, .next {
     position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
     font-weight: bold;
-    transition: 0.3s;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
     cursor: pointer;
-}
-  
-#modalImage {
-   width: 100%;
-   max-width: 400px;
-   height: auto;
+    border-radius: 5px;
+    user-select: none;
 }
 
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 /* ......................MEDIA QUERY..................... */
 @media (max-width: 600px) {
