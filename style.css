@@ -217,6 +217,7 @@ nav ul li a span {
     position: relative;
     width: 100%;
     height: auto;
+    object-fit: cover;
     border-radius: 10px;
     left: 50%; /* Letakkan elemen di tengah horizontal */
     transform: translateX(-50%);
