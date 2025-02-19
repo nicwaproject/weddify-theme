@@ -216,6 +216,7 @@ nav ul li a span {
 .album1 {
     position: relative;
     width: 100%;
+    height: auto;
     border-radius: 10px;
     left: 50%; /* Letakkan elemen di tengah horizontal */
     transform: translateX(-50%);
