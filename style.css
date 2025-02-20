@@ -1219,6 +1219,10 @@ footer {
         overflow-y: hidden;
     }
 
+    .nav-btn {
+        display: none;
+    }
+    
     .thank-you {
         padding: 10px 20px;
         line-height: 1;
